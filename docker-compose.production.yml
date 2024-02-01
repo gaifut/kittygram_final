@@ -14,8 +14,8 @@ services:
   backend:
     image: gaifut/kittygram_backend
     env_file: .env
-    depends_on:
-      - db
+   # depends_on:
+    #  - db
     volumes:
       - static:/backend_static
       - media:/media
