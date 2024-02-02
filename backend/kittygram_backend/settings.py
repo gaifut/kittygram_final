@@ -8,9 +8,9 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SECRET_KEY', default=grsk())
+SECRET_KEY = os.getenv('SECRET_KEY', default=get_random_secret_key())
 
-DEBUG = True
+DEBUG = ('DEBUG', default=False)
 
 ALLOWED_HOSTS = []
 
