@@ -41,11 +41,11 @@
   
   После запуска необходимо выполнить сбор статистики и миграции бэкенда. Статистика фронтенда собирается во время запуска контейнера, после чего он останавливается.
   ```
-  sudo docker exec -it [имя или id контейнера, узнать можно через ```sudo docker ps -a```] python manage.py migrate
+  sudo docker exec -it [имя или id контейнера, узнать можно через sudo docker ps -a] python manage.py migrate
 
-  sudo docker exec -it [имя или id контейнера, узнать можно через ```sudo docker ps -a```] python manage.py  collectstatic
+  sudo docker exec -it [имя или id контейнера, узнать можно через sudo docker ps -a] python manage.py  collectstatic
 
-  sudo docker exec -it [имя или id контейнера, узнать можно через ```sudo docker ps -a```] cp -r /app/collected_static/. /static/static/
+  sudo docker exec -it [имя или id контейнера, узнать можно через sudo docker ps -a] cp -r /app/collected_static/. /static/static/
   ```
 - Как остановить систему контейнеров:
   ```
