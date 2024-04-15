@@ -68,7 +68,9 @@ DB_HOST= название хоста
 DB_PORT=5432
 
 4. Выполнить сборку контейнеров:
-   ```sudo docker compose -f docker-compose.yml up```
+   ```
+   sudo docker compose -f docker-compose.yml up
+   ```
 - Выполнить миграции:
   
   После запуска необходимо выполнить сбор статистики и миграции бэкенда. Статистика фронтенда собирается во время запуска контейнера, после чего он останавливается.
@@ -80,7 +82,9 @@ DB_PORT=5432
   sudo docker compose -f [имя-файла-docker-compose.yml] exec backend cp -r /app/collected_static/. /static/static/
   ```
 - Как остановить систему контейнеров:
-  ```sudo docker compose -f docker-compose.yml down```
+  ```
+  sudo docker compose -f docker-compose.yml down
+  ```
 
 - 127.0.0.1:9000 Главная страница
 
