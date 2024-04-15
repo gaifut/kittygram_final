@@ -55,7 +55,7 @@
 python3.9 -m venv venv
 . venv/bin/activate
 ```
-В виртуальном окружении установить зависимости:
+В виртуальном окружении в папке backend (```cd backend```)установить зависимости:
 ```
 pip install -r requirements.txt
 ```
