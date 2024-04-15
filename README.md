@@ -41,7 +41,18 @@
   mkdir kittygram
   cd kittygram
   ```
-2. В папку проекта скачать и запустить файл docker-compose.production.yml:
+2. Создать .env файл со сделующей информацией:
+  ```
+  POSTGRES_USER=логин
+  POSTGRES_PASSWORD=пароль
+  POSTGRES_DB=имя БД
+  DB_HOST=название хоста
+  DB_PORT=5432
+  SECRET_KEY=секретный ключ (если идет подключение к серверу)
+  DEBUG=False
+  ALLOWED_HOSTS=ip адрес хоста(если есть),127.0.0.1,localhost,доменное имя (если есть)
+  ```  
+3. В папку проекта скачать и запустить файл docker-compose.production.yml:
    ```
    sudo docker compose -f docker-compose.production.yml up
    ```
@@ -60,13 +71,17 @@ python3.9 -m venv venv
 pip install -r requirements.txt
 ```
 
-3. Создать .env файл со сделующей информацией:                                                       
-POSTGRES_USER= логин
-POSTGRES_PASSWORD= пароль
-POSTGRES_DB= имя БД
-DB_HOST= название хоста
-DB_PORT=5432
-
+3. Создать .env файл со сделующей информацией:
+  ```                                                       
+  POSTGRES_USER=логин
+  POSTGRES_PASSWORD=пароль
+  POSTGRES_DB=имя БД
+  DB_HOST=название хоста
+  DB_PORT=5432
+  SECRET_KEY=секретный ключ (если идет подключение к серверу)
+  DEBUG=False
+  ALLOWED_HOSTS=ip адрес хоста(если есть),127.0.0.1,localhost,доменное имя (если есть)
+  ```
 4. Выполнить сборку контейнеров:
    ```
    sudo docker compose -f docker-compose.yml up
