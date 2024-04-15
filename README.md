@@ -36,6 +36,21 @@
 
 ## Как запустить проект:
 - Скачать docker на сервер, если его нет. Инструкции: https://docs.docker.com/get-docker/
+- Выполнить миграции:
+  
+  После запуска необходимо выполнить сбор статистики и миграции бэкенда. Статистика фронтенда собирается во время запуска контейнера, после чего он останавливается.
+  ```
+  sudo docker compose -f [имя-файла-docker-compose.yml] exec backend python manage.py migrate
+
+  sudo docker compose -f [имя-файла-docker-compose.yml] exec backend python manage.py collectstatic
+
+  sudo docker compose -f [имя-файла-docker-compose.yml] exec backend cp -r /app/collected_static/. /static/static/
+  ```
+- Как остановить систему контейнеров:
+  ```
+  sudo docker compose -f docker-compose.yml down
+  ```
+- 127.0.0.1:9000 Главная страница
 
 ### Запуск с DockerHub
 1. Создать папку проекта, например kittygram и перейти в нее:
@@ -88,20 +103,4 @@ pip install -r requirements.txt
    ```
    sudo docker compose -f docker-compose.yml up
    ```
-- Выполнить миграции:
-  
-  После запуска необходимо выполнить сбор статистики и миграции бэкенда. Статистика фронтенда собирается во время запуска контейнера, после чего он останавливается.
-  ```
-  sudo docker compose -f [имя-файла-docker-compose.yml] exec backend python manage.py migrate
-
-  sudo docker compose -f [имя-файла-docker-compose.yml] exec backend python manage.py collectstatic
-
-  sudo docker compose -f [имя-файла-docker-compose.yml] exec backend cp -r /app/collected_static/. /static/static/
-  ```
-- Как остановить систему контейнеров:
-  ```
-  sudo docker compose -f docker-compose.yml down
-  ```
-
-- 127.0.0.1:9000 Главная страница
 
