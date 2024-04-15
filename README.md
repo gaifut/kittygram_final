@@ -1,6 +1,6 @@
 # Киттиграм
 
-Сайт: https://kittygram.servehttp.com/
+## Домен: https://kittygram.servehttp.com/
 
 ## Оглавление:
 - [Стек технологий.](#Стек-технологий)
