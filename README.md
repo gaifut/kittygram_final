@@ -48,7 +48,7 @@
    
 ### Запуск с GitHub
 1. Клонировать репозиторий с проектом на свой компьютер:
-   ```git clone git@github.com:gaifut/taski-docker.git```
+   ```git clone git@github.com:gaifut/kittygram_final.git```
 
 2. Установить и активировать виртуальное окружение: 
 ```
